@@ -1,5 +1,8 @@
 import nltk
 nltk.download('punkt')
+nltk.download('wordnet')
+nltk.download('omw-1.4')
+nltk.download('punkt_tab')
 
 from textblob import TextBlob
 from newspaper import Article
@@ -20,4 +23,4 @@ text = article.summary
 
 blob = TextBlob(text)
 sentiment = blob.sentiment.polarity
-print(sentiment)
+print(f"Sentiment: {sentiment:.2f}")
